@@ -11,3 +11,5 @@ You can give some some feedback in these ways:
 2. Gmail: romangry.2004@gmail.com
 
 Thanks for your time :)
+
+Current progress: https://romanhryts.github.io/scandiweb-entry-task-version-0/
