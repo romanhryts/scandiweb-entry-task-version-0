@@ -65,3 +65,33 @@ header {
     width: 20px;
     height: 18px;
 }
+
+.nav__women.active {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.nav__men.active {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.nav__kids.active {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+.women.active {
+    border-bottom: 2px solid var(--accent-color); 
+    padding-bottom: 10px;
+}
+
+.men.active {
+    border-bottom: 2px solid var(--accent-color); 
+    padding-bottom: 10px;
+}
+
+.kids.active {
+    border-bottom: 2px solid var(--accent-color); 
+    padding-bottom: 10px;
+}
