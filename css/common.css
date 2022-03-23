@@ -4,3 +4,12 @@
     --main-font: 'Raleway', sans-serif;
     --accent-color: #5ECE7B;
 }
+
+h2 {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-size: 42px;
+    font-weight: 300;
+    margin-left: 110px;
+    margin-top: 80px;
+}
