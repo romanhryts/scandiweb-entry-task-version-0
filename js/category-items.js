@@ -7,17 +7,16 @@
 
         function renderCategoryItems(items) {
           const itemsContainer = document.querySelector(".category__items");
-          items.map((item) => {
-            itemsContainer.innerHTML = `
+            for (const item of items) {
+                itemsContainer.innerHTML += `
             <div class="category__item">
-               <img src="${item.imgUrl}" alt="${item.title}">
+               <img src="${item.imgUrl}" alt="${item.title}" class="category__item-icon">
                 <h3 class="category__item-name">${item.title}</h3>
-                <h4 class="category__item-price">$${item.price}</h4>
+                <h4 class="category__item-price">$${item.price.toFixed(2)}</h4>
             </div>
             `;
-          });
+            };
         }
 
-        loadCategoryItems();
-
+    loadCategoryItems();
 })()

@@ -1,0 +1,41 @@
+.category__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-top: 90px;
+}
+
+.category__item {
+    width: 368px;
+    height: 415px;
+    margin-right: 60px;
+    margin-bottom: 80px;
+}
+
+.category__item-name {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 0;
+}
+
+.category__item-price {
+    color: var(--main-color);
+    font-family: var(--main-font);
+    font-weight: 500;
+    line-height: 10px;
+    margin-bottom: 105px;
+}
+
+.category__item-icon {
+    width: 100%;
+    height: auto;
+}
+
+.category__item:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 9px #D3D3D3;
+    padding: 10px 10px 10px 10px;
+}
