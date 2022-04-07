@@ -95,3 +95,8 @@ header {
     border-bottom: 2px solid var(--accent-color); 
     padding-bottom: 10px;
 }
+
+.icon__arrow.active {
+    transform: scaleY(-1);
+    margin-bottom: 3px;
+}

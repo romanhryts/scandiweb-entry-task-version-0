@@ -30,5 +30,6 @@
 }
 
 .header__currency-converter.active {
+    transition: 0.3s;
     visibility: visible;
 }
