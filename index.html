@@ -14,8 +14,8 @@
       <div class="header__container">
         <!-- Here is navigation menu for user -->
         <nav class="header__nav">
-          <button class="nav__women nav__point">
-            <span class="women">WOMEN</span>
+          <button class="nav__women nav__point active">
+            <span class="women active">WOMEN</span>
           </button>
           <button class="nav__men nav__point">
             <span class="men">MEN</span>
@@ -31,17 +31,15 @@
         <!-- Here are some useful things for user, like currency converter and bag -->
         <div class="header__tools">
           <a href="#" class="icon__dollar">
-            <img src="img/header/$.svg" alt="Dollar Icon" />
-            <img
-              src="img/header/arrow-down.svg"
-              alt="Arrow Down Icon"
-              class="icon__arrow"
-            />
-          </a>
+            <img src="img/header/$.svg" alt="Dollar Icon"/>
+            <img src="img/header/arrow-down.svg" alt="Arrow Down Icon" class="icon__arrow"/></a>
+            <div class="header__currency-converter active">
+              <button class="currency-converter__USD currency">$ USD</button>
+              <button class="currency-converter__EUR currency">€ EUR</button>
+              <button class="currency-converter__JPY currency">¥ JPY</button>
+            </div>
           <!-- <span class="icon__arrow">⋁</span> arrow top: ⋀ -->
-          <a href="#" class="icon__trolley"
-            ><img src="img/header/trolley.svg" alt="Trolley Icon" class="trolley"
-          /></a>
+          <a href="#" class="icon__trolley"><img src="img/header/trolley.svg" alt="Trolley Icon" class="trolley"/></a>
         </div>
       </div>
     </header>
@@ -52,5 +50,6 @@
     </main>
     <script src="js/nav-menu.js"></script>
     <script src="js/category-items.js"></script>
+    <script src="js/currency-converter.js"></script>
   </body>
 </html>
