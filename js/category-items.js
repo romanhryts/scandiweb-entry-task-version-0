@@ -1,11 +1,8 @@
 (function () {
   let items;
-  let activeCurrency = "price";
-  let activeCurrencyIcon = "currency";
 
   const rateEuro = 0.91;
   const rateYen = 123.88;
-
 
   async function loadCategoryItems() {
     const response = await fetch("category-items.json");
@@ -14,19 +11,15 @@
     items = data.map((item) => {
       item.euroPrice = item.price * rateEuro;
       item.yenPrice = item.price * rateYen;
-      return item;
-    });
-
-    items = data.map((item) => {
       item.euroCurrency = "€";
       item.yenCurrency = "¥";
       return item;
-    })
+    });
 
-    renderCategoryItems();
+    renderCategoryItems("price", "currency");
   }
 
-  function renderCategoryItems() {
+  function renderCategoryItems(activeCurrency, activeCurrencyIcon) {
     const itemsContainer = document.querySelector(".category__items");
     itemsContainer.innerHTML = "";
     for (const item of items) {
@@ -40,24 +33,16 @@
     }
   }
 
-  function updateCurrency(newCurrency, newCurrencyIcon) {
-    if (activeCurrency !== newCurrency && activeCurrencyIcon !== newCurrencyIcon) {
-      activeCurrency = newCurrency;
-      activeCurrencyIcon = newCurrencyIcon;
-      renderCategoryItems();
-    }
-  }
-
   document.querySelector(".currency-converter__USD").addEventListener("click", function () {
-      updateCurrency("price", "currency");
+      renderCategoryItems("price", "currency");
     });
 
   document.querySelector(".currency-converter__EUR").addEventListener("click", function () {
-      updateCurrency("euroPrice", "euroCurrency");
+      renderCategoryItems("euroPrice", "euroCurrency");
     });
 
   document.querySelector(".currency-converter__JPY").addEventListener("click", function () {
-      updateCurrency("yenPrice", "yenCurrency");
+      renderCategoryItems("yenPrice", "yenCurrency");
     });
 
   loadCategoryItems();
